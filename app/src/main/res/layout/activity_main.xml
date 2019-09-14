@@ -1,18 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.github.MainActivity">
+
+    <EditText
+        android:id="@+id/usd"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_centerHorizontal="true"
+        android:background="#1DE9B6"
+        android:hint="Dollar"
+        android:textAlignment="center"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_below="@+id/usd"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="clickdollartotaka"
+        android:text="Dollar to Taka"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/bdt"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_below="@+id/submit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#1DE9B6"
+        android:hint="Taka"
+        android:textAlignment="center"
+        android:textColor="#404040"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/submit2"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_below="@+id/bdt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="clicktakatodollar"
+        android:text="Taka to Dollar"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_below="@+id/submit2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="reset"
+        android:text="RESET"
+        tools:ignore="HardcodedText" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:text="1USD = 84.50 BDT"
+        tools:ignore="HardcodedText" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
